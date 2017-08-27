@@ -26,6 +26,8 @@ interface Stream
      * Warning: This could attempt to load a large amount of data into memory.
      *
      * This method MUST NOT throw an exception.
+     *
+     * @return string The string value of the stream.
      */
     public function __toString(): string;
 
@@ -33,6 +35,8 @@ interface Stream
      * Closes the stream and any underlying resources.
      *
      * This method MUST NOT throw an exception.
+     *
+     * @return void
      */
     public function close(): void;
 
@@ -51,6 +55,9 @@ interface Stream
      * Returns whether the stream pointer is at the end of the stream.
      *
      * This method MUST NOT throw an exception.
+     *
+     * @return bool `true` if the stream pointer is at the end of the stream,
+     *     `false` otherwise.
      */
     public function eof(): bool;
 
@@ -60,6 +67,8 @@ interface Stream
      *
      * @throws StreamException If unable to read or an error occurs while
      *     reading.
+     *
+     * @return string The string value of the remaining data in the stream.
      */
     public function getContents(): string;
 
@@ -71,6 +80,8 @@ interface Stream
      *
      * This method MUST NOT throw an exception.
      *
+     * @param ?string $key Optional. A key from `stream_get_meta_data()`.
+     *
      * @return array|mixed|null Returns an associative array if no key is
      *     provided. Returns a specific key value if a key is provided and the
      *     value is found, or null if the key is not found.
@@ -81,6 +92,8 @@ interface Stream
      * Gets the size of the stream in bytes, if known.
      *
      * This method MUST NOT throw an exception.
+     *
+     * @return ?int The size of the stream in bytes if known, `null` otherwise.
      */
     public function getSize(): ?int;
 
@@ -88,6 +101,8 @@ interface Stream
      * Returns whether the stream is readable.
      *
      * This method MUST NOT throw an exception.
+     *
+     * @return bool `true` if the stream is readable, `false` otherwise.
      */
     public function isReadable(): bool;
 
@@ -95,6 +110,8 @@ interface Stream
      * Returns whether the stream is seekable.
      *
      * This method MUST NOT throw an exception.
+     *
+     * @return bool `true` if the stream is seekable, `false` otherwise.
      */
     public function isSeekable(): bool;
 
@@ -102,6 +119,8 @@ interface Stream
      * Returns whether the stream is writable.
      *
      * This method MUST NOT throw an exception.
+     *
+     * @return bool `true` if the stream is writable, `false` otherwise.
      */
     public function isWritable(): bool;
 
@@ -113,7 +132,11 @@ interface Stream
      *
      * This method MUST return an empty string if no bytes are available.
      *
+     * @param int $length The length in bytes to read from the stream.
+     *
      * @throws StreamException If an error occurs.
+     *
+     * @return string
      */
     public function read(int $length): string;
 
