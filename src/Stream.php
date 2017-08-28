@@ -165,3 +165,4 @@ interface Stream
      */
     public function write(string $string): int;
 }
+
