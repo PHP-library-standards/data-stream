@@ -1,10 +1,10 @@
 {
-    "name": "pls/stream",
+    "name": "pls/data-stream",
     "description": "PLS stream specification",
     "keywords": [
-        "PLS", "stream"
+        "PLS", "data", "stream"
     ],
-    "homepage": "https://github.com/PHP-library-standards/stream",
+    "homepage": "https://github.com/PHP-library-standards/data-stream",
     "license": "MIT",
     "authors": [
         {
@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Pls\\Stream\\": "src"
+            "Pls\\Data\\Stream\\": "src"
         }
     }
 }
