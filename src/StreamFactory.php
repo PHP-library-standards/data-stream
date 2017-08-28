@@ -1,6 +1,6 @@
 <?php
 /**
- * @package   Pls\Stream
+ * @package   Pls\Data\Stream
  * @author    PHP Library Standards <https://github.com/PHP-library-standards>
  * @copyright 2017 PHP Library Standards
  * @license   https://opensource.org/licenses/MIT The MIT License
