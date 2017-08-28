@@ -6,7 +6,7 @@
  * @license   https://opensource.org/licenses/MIT The MIT License
  */
 
-namespace Pls\Stream;
+namespace Pls\Data\Stream;
 
 /**
  * Interface describing a data stream factory.
